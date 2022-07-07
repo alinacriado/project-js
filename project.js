@@ -1,5 +1,5 @@
 const money = 50000;
-let income;
+const income = 'taxi, shop, cafe';
 let addExpenses;
 let deposit;
 let mission;
