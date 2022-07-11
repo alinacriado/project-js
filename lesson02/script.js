@@ -10,7 +10,7 @@ const mandatoryExpenses1 = prompt('Какие обязательные ежем�
 const mandatoryExpensesCost1 = +prompt('Во сколько это обойдется?');
 const mandatoryExpenses2 = prompt('Какие обязательные ежемесячные расходы у вас есть?');
 const mandatoryExpensesCost2 = +prompt('Во сколько это обойдется?');
-const budgetMonth = money - mandatoryExpensesCost_1 - mandatoryExpensesCost_2;
+const budgetMonth = money - mandatoryExpensesCost1 - mandatoryExpensesCost2;
 const timeForMission = mission / budgetMonth;
 const budgetDay = budgetMonth / 30;
 
