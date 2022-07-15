@@ -11,10 +11,11 @@ let start = function() {
   money = +prompt('Ваш месячный доход?');
   console.log(money);
 
-  while (isNaN(money) || money == '' || money == null) {
+  do {
     money = prompt('Ваш месячный доход?');
     console.log(money);
   }
+  while (isNaN(money) || money == '' || money == null);
 };
 start()
 
@@ -30,12 +31,17 @@ function getExpensesMonth() {
     } else if (i === 1) {
       mandatoryExpenses2 = prompt('Какие обязательные ежемесячные расходы у вас есть?', 'flat');
     }
-  
-    sum += +prompt('Во сколько это обойдется?', 10000);
+    
+    mandatoryExpensesCost = +prompt('Во сколько это обойдется?');
+    while (isNaN(mandatoryExpensesCost) || mandatoryExpensesCost == '' || mandatoryExpensesCost == null) {
+      mandatoryExpensesCost = prompt('Во сколько это обойдется?');
+    }
+    sum += prompt('Во сколько это обойдется?');
   }
   return sum;
 }
 const expensesMonth = getExpensesMonth();
+
 
 function getAccumulatedMonth(income, expenses) {
   return income - expenses;
